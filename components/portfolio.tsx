@@ -58,11 +58,11 @@ export function PortfolioComponent() {
             <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="md:w-1/2 mb-8 md:mb-0 flex justify-center md:justify-end md:pr-8">                
             <Image 
-                  src="/mine.jpeg" 
+                  src="/mine.jpeg?height=400&width=400" 
                   alt="Maxamed Maxamed"
-                  width={400} 
-                  height={400}
-                  className="rounded-full shadow-lg object-center"
+                  width={300} 
+                  height={300}
+                  className="rounded-full  shadow-lg object-center "
                 />
               </div>
               <div className="md:w-1/2">
