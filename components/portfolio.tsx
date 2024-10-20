@@ -1,9 +1,6 @@
 'use client'
 import { ReactNode } from 'react';
 import Image from 'next/image'
-// import { Github, Linkedin, Mail, ExternalLink, Award, Code, User, Home, Briefcase, Phone, Server, Shield, Database, GitBranch } from 'lucide-react'
-
-// import { Github, Linkedin, Mail, ExternalLink, Award, Code, User, Home, Briefcase, Phone, Server, Shield, Database, GitBranch, Layers  } from 'lucide-react';
 
 import { Github, Linkedin, Mail, ExternalLink, Award, Code, User, Home, Briefcase, Phone, Server, Shield, Database, GitBranch, Layers, Cloud } from 'lucide-react';
 
@@ -21,12 +18,7 @@ const NavItem: React.FC<NavItemProps> = ({ icon, label, section }) => (
 )
 
 
-// const NavItem = ({ icon, label, section }) => (
-//   <a href={`#${section}`} className="flex items-center px-4 py-2 text-gray-700 hover:bg-blue-100 rounded-md transition-colors">
-//     {icon}
-//     <span className="ml-2">{label}</span>
-//   </a>
-// )
+
 
 export function PortfolioComponent() {
   return (
@@ -79,310 +71,7 @@ export function PortfolioComponent() {
           </div>
         </section>
 
-        {/* <section id="skills" className="py-20 bg-gray-100">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-8 text-center text-gray-800">Skills & Expertise</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  title: "Full Stack Development",
-                  icon: <Code size={48} className="text-blue-500" />,
-                  skills: ["JavaScript/HTML/CSS", "Python", "Java", "React", "Node.js", "HTML/CSS"]
-                },
-                {
-                  title: "Cloud Technologies",
-                  icon: <Server size={48} className="text-purple-500" />,
-                  skills: ["AWS", "Cloud Deployment", "Serverless", "Docker"]
-                },
-                {
-                  title: "Cybersecurity",
-                  icon: <Shield size={48} className="text-red-500" />,
-                  skills: ["Network Security", "Penetration Testing", "Security Audits"]
-                },
-                {
-                  title: "Database Management",
-                  icon: <Database size={48} className="text-green-500" />,
-                  skills: ["SQL", "MongoDB", "Firebase", "Data Modeling"]
-                },
-                {
-                  title: "Version Control",
-                  icon: <GitBranch size={48} className="text-orange-500" />,
-                  skills: ["Git", "GitHub", "GitLab", "Branching Strategies"]
-                },
-                {
-                  title: "API Development",
-                  icon: <Server size={48} className="text-indigo-500" />,
-                  skills: ["RESTful APIs", "GraphQL", "API Security", "Swagger"]
-                }
-              ].map((category, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
-                  <div className="p-6">
-                    <div className="flex items-center mb-4">
-                      {category.icon}
-                      <h3 className="text-xl font-semibold ml-4 text-gray-800">{category.title}</h3>
-                    </div>
-                    <ul className="list-disc list-inside">
-                      {category.skills.map((skill, skillIndex) => (
-                        <li key={skillIndex} className="text-gray-600">{skill}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section> */}
-{/* later  */}
-
-{/* <section id="skills" className="py-20 bg-gray-100">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 text-center text-gray-800">Skills & Expertise</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[
-            {
-              title: "Soft Skills",
-              icon: <User size={48} className="text-blue-500" />,
-              skills: ["Team Collaboration & Communication", "Time Management & Prioritization", "Problem-solving & Critical Thinking"]
-            },
-            {
-              title: "Programming Languages",
-              icon: <Code size={48} className="text-purple-500" />,
-              skills: ["Java", "Python", "JavaScript", "HTML/CSS", "Kotlin", "TypeScript"]
-            },
-            {
-              title: "Frameworks & Libraries",
-              icon: <Server size={48} className="text-red-500" />,
-              skills: [
-                "React", "Next.js", "Node.js", "Vue.js", "Vite.js", "NPM", "Webpack", "MERN", "FastAPI", "Nuxt.js", "REST APIs", "React Native", 
-                "Express.js", "Electron.js", "Django", "Tailwind CSS", "Material-UI (MUI)", "Flutter"
-              ]
-            },
-            {
-              title: "Mobile Development",
-              icon: <Phone size={48} className="text-green-500" />,
-              skills: ["Android Studio", "Xcode"]
-            },
-            {
-              title: "Design & Prototyping Tools",
-              icon: <Award size={48} className="text-yellow-500" />,
-              skills: ["Figma", "Adobe XD", "Sketch (UI/UX Design)", "InVision (Prototyping)"]
-            },
-            {
-              title: "Databases",
-              icon: <Database size={48} className="text-indigo-500" />,
-              skills: ["SQL", "MySQL", "MongoDB", "Firebase", "PostgreSQL", "Power BI", "Microsoft Excel", "Microsoft Access"]
-            },
-            {
-              title: "Tools & Platforms",
-              icon: <GitBranch size={48} className="text-orange-500" />,
-              skills: ["Git", "GitHub", "Docker", "AWS", "VS Code", "IntelliJ IDEA", "PyCharm IDE", "Postman API Platform"]
-            },
-            {
-              title: "Software Development",
-              icon: <Briefcase size={48} className="text-teal-500" />,
-              skills: ["Agile Methodologies", "Software Lifecycle Management", "Code Reviews", "CI/CD Pipelines", "GitHub Actions"]
-            },
-            {
-              title: "APIs & Web Services",
-              icon: <Server size={48} className="text-pink-500" />,
-              skills: ["GraphQL", "RESTful Services"]
-            },
-            {
-              title: "Testing Frameworks",
-              icon: <Shield size={48} className="text-cyan-500" />,
-              skills: ["Jest (JavaScript)", "Mocha (JavaScript)", "Chai (JavaScript)", "PyTest (Python)", "Selenium (Automated Testing)"]
-            }
-          ].map((category, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="p-6">
-                <div className="flex items-center mb-4">
-                  {category.icon}
-                  <h3 className="text-xl font-semibold ml-4 text-gray-800">{category.title}</h3>
-                </div>
-                <ul className="list-disc list-inside">
-                  {category.skills.map((skill, skillIndex) => (
-                    <li key={skillIndex} className="text-gray-600">{skill}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-        <section id="projects" className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-8 text-center text-gray-800">Projects</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  title: "Hydration Mate",
-                  description: "Mobile app to track daily water intake",
-                  tech: ["React Native", "Firebase", "Node.js"],
-                  image: "/img.png?height=200&width=300"
-                },
-                {
-                  title: "E-commerce Platform",
-                  description: "Full-stack online shopping platform",
-                  tech: ["React", "Node.js", "MongoDB", "Stripe"],
-                  image: "/E-commercePlatform.jpeg?height=200&width=300"
-                },
-                {
-                  title: "Vulnerability Assessment Tool",
-                  description: "Automated security scanning tool",
-                  tech: ["Python", "Docker", "REST APIs"],
-                  image: "/VulnerabilityAssessmentTool.jpeg?height=200&width=300"
-                },
-                {
-                  title: "Movie Web Application",
-                  description: "React-based movie browsing and rating app",
-                  tech: ["React", "Redux", "TMDB API"],
-                  image: "/MovieApp.jpeg?height=200&width=300"
-                },
-                {
-                  title: "Real-Time Chat Application",
-                  description: "Secure messaging app with end-to-end encryption",
-                  tech: ["Socket.io", "React", "Node.js", "MongoDB"],
-                  image: "/Chat.jpeg?height=200&width=300"
-                }
-              ].map((project, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
-                  <Image src={project.image} alt={project.title} width={300} height={200} className="w-full h-48 object-cover" />
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-2 text-gray-800">{project.title}</h3>
-                    <p className="text-gray-600 mb-4">{project.description}</p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {project.tech.map((tech, techIndex) => (
-                        <span key={techIndex} className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                    <a href="#" className="text-blue-600 hover:text-blue-800 transition-colors inline-flex items-center">
-                      View Project <ExternalLink size={16} className="ml-1" />
-                    </a>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="certifications" className="py-20 bg-gray-100">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-8 text-center text-gray-800">Certifications</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              {[
-                {
-                  name: "AWS Certified Cloud Practitioner",
-                  issuer: "Amazon Web Services",
-                  date: "June 2023",
-                  logo: "/aws.png?height=100&width=100"
-                },
-                {
-                  name: "CompTIA Security+ (In Progress)",
-                  issuer: "CompTIA",
-                  date: "Expected December 2023",
-                  logo: "/CompTIA Security+.png?height=100&width=100"
-                }
-              ].map((cert, index) => (
-                <div key={index} className="flex items-center bg-white rounded-lg p-6 shadow-md">
-                  <Image src={cert.logo} alt={cert.name} width={100} height={100} className="mr-6" />
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2 text-gray-800">{cert.name}</h3>
-                    <p className="text-gray-600">{cert.issuer}</p>
-                    <p className="text-gray-500">{cert.date}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section> */}
-
- 
-{/* <section id="skills" className="py-20 bg-gray-100">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 text-center text-gray-800">Skills & Expertise</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[
-            {
-              title: "Soft Skills",
-              icon: <User size={48} className="text-blue-500" />,
-              skills: ["Team Collaboration & Communication", "Time Management & Prioritization", "Problem-solving & Critical Thinking"]
-            },
-            {
-              title: "Programming Languages",
-              icon: <Code size={48} className="text-purple-500" />,
-              skills: ["Java", "Python", "JavaScript", "HTML/CSS", "Kotlin", "TypeScript"]
-            },
-            {
-              title: "Frameworks",
-              icon: <Server size={48} className="text-red-500" />,
-              skills: [
-                "React", "Next.js", "Vue.js", "FastAPI", "Nuxt.js", "React Native", "Express.js", "Django", "Flutter"
-              ]
-            },
-            {
-              title: "Libraries",
-              icon: <Layers size={48} className="text-orange-500" />,
-              skills: [
-                "Node.js", "Vite.js", "NPM", "Webpack", "Tailwind CSS", "Material-UI (MUI)", "Electron.js"
-              ]
-            },
-            {
-              title: "Mobile Development",
-              icon: <Phone size={48} className="text-green-500" />,
-              skills: ["Android Studio", "Xcode"]
-            },
-            {
-              title: "Design & Prototyping Tools",
-              icon: <Award size={48} className="text-yellow-500" />,
-              skills: ["Figma", "Adobe XD", "Sketch (UI/UX Design)", "InVision (Prototyping)"]
-            },
-            {
-              title: "Databases",
-              icon: <Database size={48} className="text-indigo-500" />,
-              skills: ["SQL", "MySQL", "MongoDB", "Firebase", "PostgreSQL", "Microsoft Excel", "Microsoft Access"]
-            },
-            {
-              title: "Tools & Platforms",
-              icon: <GitBranch size={48} className="text-orange-500" />,
-              skills: ["Git", "GitHub", "Docker", "AWS", "VS Code", "IntelliJ IDEA", "PyCharm IDE", "Postman API Platform"]
-            },
-            {
-              title: "Software Development",
-              icon: <Briefcase size={48} className="text-teal-500" />,
-              skills: ["Agile Methodologies", "Software Lifecycle Management", "Code Reviews", "CI/CD Pipelines", "GitHub Actions"]
-            },
-            {
-              title: "APIs & Web Services",
-              icon: <Server size={48} className="text-pink-500" />,
-              skills: ["GraphQL", "RESTful Services"]
-            },
-            {
-              title: "Testing Frameworks",
-              icon: <Shield size={48} className="text-cyan-500" />,
-              skills: ["Jest (JavaScript)", "Mocha (JavaScript)", "Chai (JavaScript)", "PyTest (Python)", "Selenium (Automated Testing)"]
-            }
-          ].map((category, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="p-6">
-                <div className="flex items-center mb-4">
-                  {category.icon}
-                  <h3 className="text-xl font-semibold ml-4 text-gray-800">{category.title}</h3>
-                </div>
-                <ul className="list-disc list-inside">
-                  {category.skills.map((skill, skillIndex) => (
-                    <li key={skillIndex} className="text-gray-600">{skill}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section> */}
+       
 
 
 
@@ -487,46 +176,77 @@ export function PortfolioComponent() {
 
 
 
+<section id="contact" className="py-20 bg-slate-200">
+  <div className="container mx-auto px-6">
+    <h2 className="text-4xl font-bold mb-8 text-center text-gray-900">Contact Me</h2>
+    <div className="max-w-xl mx-auto bg-white rounded-lg shadow-lg p-8">
+      <form className="space-y-6">
+        <div>
+          <label htmlFor="name" className="block text-sm font-medium text-gray-800">Name</label>
+          <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            className="mt-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50 p-3" 
+          />
+        </div>
+        <div>
+          <label htmlFor="email" className="block text-sm font-medium text-gray-800">Email</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            className="mt-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50 p-3" 
+          />
+        </div>
+        <div>
+          <label htmlFor="message" className="block text-sm font-medium text-gray-800">Message</label>
+          <textarea 
+            id="message" 
+            name="message" 
+            rows={4} 
+            className="mt-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50 p-3"
+          ></textarea>
+        </div>
+        <div>
+          <button 
+            type="submit" 
+            className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150"
+          >
+            Send Message
+          </button>
+        </div>
+      </form>
+      <div className="mt-8 flex justify-center space-x-6">
+        <a 
+          href="https://linkedin.com/in/maxamed-maxamed-a87298151" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="text-gray-400 hover:text-blue-600 transition duration-200"
+        >
+          <Linkedin size={24} />
+        </a>
+        <a 
+          href="https://github.com/Maxamed-Maxamed" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="text-gray-400 hover:text-gray-600 transition duration-200"
+        >
+          <Github size={24} />
+        </a>
+        <a 
+          href="mailto:maxamed@example.com" 
+          className="text-gray-400 hover:text-blue-600 transition duration-200"
+        >
+          <Mail size={24} />
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
-        <section id="contact" className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-8 text-center text-gray-800">Contact Me</h2>
-            <div className="max-w-2xl mx-auto">
-              <form className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
-                  <input type="text" id="name" name="name" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50" />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
-                  <input type="email" id="email" name="email" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50" />
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
-                  <textarea id="message" name="message" rows={4} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"></textarea>
-                </div>
-                <div>
-                  <button type="submit" className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                    Send Message
-                  </button>
-                </div>
-              </form>
-              <div className="mt-8 flex justify-center space-x-6">
-                <a href="https://linkedin.com/in/maxamed-maxamed-a87298151" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-500">
-                  <Linkedin size={24} />
-                </a>
-                <a href="https://github.com/Maxamed-Maxamed" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-500">
-                  <Github size={24} />
-                </a>
-                <a href="mailto:maxamed@example.com" className="text-gray-400 hover:text-blue-500">
-                  <Mail size={24} />
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
 
       <footer className="bg-gray-800 text-white py-8">
