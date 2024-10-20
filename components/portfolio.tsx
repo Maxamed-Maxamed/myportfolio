@@ -84,7 +84,7 @@ export function PortfolioComponent() {
                 {
                   title: "Full Stack Development",
                   icon: <Code size={48} className="text-blue-500" />,
-                  skills: ["JavaScript", "Python", "Java", "React", "Node.js", "HTML/CSS"]
+                  skills: ["JavaScript/HTML/CSS", "Python", "Java", "React", "Node.js", "HTML/CSS"]
                 },
                 {
                   title: "Cloud Technologies",
