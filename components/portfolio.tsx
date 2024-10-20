@@ -75,7 +75,7 @@ export function PortfolioComponent() {
 
 
 
-<section id="skills" className="py-20 bg-gray-100">
+<section id="skills" className="py-20  bg-white">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-8 text-center text-gray-800">Skills & Expertise</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -234,7 +234,7 @@ export function PortfolioComponent() {
           </div>
         </section>
 
-        <section id="certifications" className="py-20 bg-gray-100">
+        <section id="certifications" className="py-20  bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold mb-8 text-center text-gray-800">Certifications</h2>
             <div className="grid md:grid-cols-2 gap-8">
