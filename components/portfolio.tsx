@@ -145,25 +145,25 @@ export function PortfolioComponent() {
                   title: "E-commerce Platform",
                   description: "Full-stack online shopping platform",
                   tech: ["React", "Node.js", "MongoDB", "Stripe"],
-                  image: "/placeholder.svg?height=200&width=300"
+                  image: "/E-commercePlatform.jpeg?height=200&width=300"
                 },
                 {
                   title: "Vulnerability Assessment Tool",
                   description: "Automated security scanning tool",
                   tech: ["Python", "Docker", "REST APIs"],
-                  image: "/placeholder.svg?height=200&width=300"
+                  image: "/VulnerabilityAssessmentTool.jpeg?height=200&width=300"
                 },
                 {
                   title: "Movie Web Application",
                   description: "React-based movie browsing and rating app",
                   tech: ["React", "Redux", "TMDB API"],
-                  image: "/placeholder.svg?height=200&width=300"
+                  image: "/MovieApp.jpeg?height=200&width=300"
                 },
                 {
                   title: "Real-Time Chat Application",
                   description: "Secure messaging app with end-to-end encryption",
                   tech: ["Socket.io", "React", "Node.js", "MongoDB"],
-                  image: "/placeholder.svg?height=200&width=300"
+                  image: "/Chat.jpeg?height=200&width=300"
                 }
               ].map((project, index) => (
                 <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
