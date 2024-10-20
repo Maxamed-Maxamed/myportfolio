@@ -1,14 +1,29 @@
 'use client'
-
+import { ReactNode } from 'react';
 import Image from 'next/image'
 import { Github, Linkedin, Mail, ExternalLink, Award, Code, User, Home, Briefcase, Phone, Server, Shield, Database, GitBranch } from 'lucide-react'
 
-const NavItem = ({ icon, label, section }) => (
+
+interface NavItemProps {
+  icon: ReactNode;
+  label: string;
+  section: string;
+}
+
+const NavItem: React.FC<NavItemProps> = ({ icon, label, section }) => (
   <a href={`#${section}`} className="flex items-center px-4 py-2 text-gray-700 hover:bg-blue-100 rounded-md transition-colors">
     {icon}
     <span className="ml-2">{label}</span>
   </a>
 )
+
+
+// const NavItem = ({ icon, label, section }) => (
+//   <a href={`#${section}`} className="flex items-center px-4 py-2 text-gray-700 hover:bg-blue-100 rounded-md transition-colors">
+//     {icon}
+//     <span className="ml-2">{label}</span>
+//   </a>
+// )
 
 export function PortfolioComponent() {
   return (
@@ -41,12 +56,13 @@ export function PortfolioComponent() {
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold mb-8 text-center text-gray-800">About Me</h2>
             <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="md:w-1/2 mb-8 md:mb-0 flex justify-center md:justify-end md:pr-8">                <Image 
+            <div className="md:w-1/2 mb-8 md:mb-0 flex justify-center md:justify-end md:pr-8">                
+            <Image 
                   src="/mine.jpeg" 
                   alt="Maxamed Maxamed"
                   width={400} 
                   height={400}
-                  className="rounded-full shadow-lg"
+                  className="rounded-full shadow-lg object-center"
                 />
               </div>
               <div className="md:w-1/2">
