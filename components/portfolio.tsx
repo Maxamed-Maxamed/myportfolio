@@ -176,6 +176,98 @@ export function PortfolioComponent() {
 
 
 
+    <section id="projects" className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold mb-8 text-center text-gray-800">Projects</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  title: "Hydration Mate",
+                  description: "Mobile app to track daily water intake",
+                  tech: ["React Native", "Firebase", "Node.js"],
+                  image: "/img.png?height=200&width=300"
+                },
+                {
+                  title: "E-commerce Platform",
+                  description: "Full-stack online shopping platform",
+                  tech: ["React", "Node.js", "MongoDB", "Stripe"],
+                  image: "/E-commercePlatform.jpeg?height=200&width=300"
+                },
+                {
+                  title: "Vulnerability Assessment Tool",
+                  description: "Automated security scanning tool",
+                  tech: ["Python", "Docker", "REST APIs"],
+                  image: "/VulnerabilityAssessmentTool.jpeg?height=200&width=300"
+                },
+                {
+                  title: "Movie Web Application",
+                  description: "React-based movie browsing and rating app",
+                  tech: ["React", "Redux", "TMDB API"],
+                  image: "/MovieApp.jpeg?height=200&width=300"
+                },
+                {
+                  title: "Real-Time Chat Application",
+                  description: "Secure messaging app with end-to-end encryption",
+                  tech: ["Socket.io", "React", "Node.js", "MongoDB"],
+                  image: "/Chat.jpeg?height=200&width=300"
+                }
+              ].map((project, index) => (
+                <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
+                  <Image src={project.image} alt={project.title} width={300} height={200} className="w-full h-48 object-cover" />
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold mb-2 text-gray-800">{project.title}</h3>
+                    <p className="text-gray-600 mb-4">{project.description}</p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.tech.map((tech, techIndex) => (
+                        <span key={techIndex} className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                    <a href="#" className="text-blue-600 hover:text-blue-800 transition-colors inline-flex items-center">
+                      View Project <ExternalLink size={16} className="ml-1" />
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="certifications" className="py-20 bg-gray-100">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold mb-8 text-center text-gray-800">Certifications</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {[
+                {
+                  name: "AWS Certified Cloud Practitioner",
+                  issuer: "Amazon Web Services",
+                  date: "June 2023",
+                  logo: "/aws.png?height=100&width=100"
+                },
+                {
+                  name: "CompTIA Security+ (In Progress)",
+                  issuer: "CompTIA",
+                  date: "Expected December 2023",
+                  logo: "/CompTIA Security+.png?height=100&width=100"
+                }
+              ].map((cert, index) => (
+                <div key={index} className="flex items-center bg-white rounded-lg p-6 shadow-md">
+                  <Image src={cert.logo} alt={cert.name} width={100} height={100} className="mr-6" />
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2 text-gray-800">{cert.name}</h3>
+                    <p className="text-gray-600">{cert.issuer}</p>
+                    <p className="text-gray-500">{cert.date}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        
+
+
+
 <section id="contact" className="py-20 bg-slate-200">
   <div className="container mx-auto px-6">
     <h2 className="text-4xl font-bold mb-8 text-center text-gray-900">Contact Me</h2>
