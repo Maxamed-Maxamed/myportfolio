@@ -1,17 +1,24 @@
 'use client'
 import { ReactNode } from 'react';
 import Image from 'next/image'
+import { useState } from 'react';
 
-import { Github, Linkedin, Mail, ExternalLink, Award, Code, User, Home, Briefcase, Phone, Server, Shield, Database, GitBranch, Layers, Cloud } from 'lucide-react';
+import { Github, Linkedin, Mail, ExternalLink, Award, Code, User, Home, Briefcase, Phone, Server, Shield, Database, GitBranch, Layers, Cloud, Menu, X } from 'lucide-react';
 
 interface NavItemProps {
   icon: ReactNode;
   label: string;
   section: string;
+  onClose: () => void;
 }
 
-const NavItem: React.FC<NavItemProps> = ({ icon, label, section }) => (
-  <a href={`#${section}`} className="flex items-center px-4 py-2 text-gray-700 hover:bg-blue-100 rounded-md transition-colors">
+
+const NavItem: React.FC<NavItemProps> = ({ icon, label, section, onClose }) => (
+  <a 
+    href={`#${section}`} 
+    className="flex items-center px-4 py-2 text-gray-700 hover:bg-blue-100 rounded-md transition-colors"
+    onClick={onClose}
+  >
     {icon}
     <span className="ml-2">{label}</span>
   </a>
@@ -20,21 +27,50 @@ const NavItem: React.FC<NavItemProps> = ({ icon, label, section }) => (
 
 
 
+
 export function PortfolioComponent() {
+
+  
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   return (
     <div className="min-h-screen bg-gray-50 font-sans">
       <nav className="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <a href="#home" className="text-2xl font-bold text-blue-600">MM</a>
           
-          <div className="hidden md:flex space-x-4">
-            <NavItem icon={<Home size={18} />} label="Home" section="home" />
-            <NavItem icon={<User size={18} />} label="About" section="about" />
-            <NavItem icon={<Briefcase size={18} />} label="Projects" section="projects" />
-            <NavItem icon={<Award size={18} />} label="Certifications" section="certifications" />
-            <NavItem icon={<Phone size={18} />} label="Contact" section="contact" />
+          <div className="md:hidden">
+            <button onClick={toggleMenu} className="text-gray-500 hover:text-gray-600">
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
+
+          <div className="hidden md:flex space-x-4">
+  <NavItem icon={<Home size={18} />} label="Home" section="home" onClose={() => setIsMenuOpen(false)} />
+  <NavItem icon={<User size={18} />} label="About" section="about" onClose={() => setIsMenuOpen(false)} />
+  <NavItem icon={<Briefcase size={18} />} label="Projects" section="projects" onClose={() => setIsMenuOpen(false)} />
+  <NavItem icon={<Award size={18} />} label="Certifications" section="certifications" onClose={() => setIsMenuOpen(false)} />
+  <NavItem icon={<Phone size={18} />} label="Contact" section="contact" onClose={() => setIsMenuOpen(false)} />
+</div>
+
         </div>
+
+
+{/* Mobile menu */}
+{isMenuOpen && (
+  <div className="md:hidden">
+    <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <NavItem icon={<Home size={18} />} label="Home" section="home" onClose={() => setIsMenuOpen(false)} />
+      <NavItem icon={<User size={18} />} label="About" section="about" onClose={() => setIsMenuOpen(false)} />
+      <NavItem icon={<Briefcase size={18} />} label="Projects" section="projects" onClose={() => setIsMenuOpen(false)} />
+      <NavItem icon={<Award size={18} />} label="Certifications" section="certifications" onClose={() => setIsMenuOpen(false)} />
+      <NavItem icon={<Phone size={18} />} label="Contact" section="contact" onClose={() => setIsMenuOpen(false)} />
+    </div>
+  </div>
+)}
+
+
       </nav>
 
 
