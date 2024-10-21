@@ -48,7 +48,7 @@ export function PortfolioComponent() {
       <main className="pt-16">
         <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4 text-gray-800">MM</h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4 text-gray-800">Maxamed Maxamed</h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-600">Aspiring Full Stack Developer & Cybersecurity Enthusiast</p>
             <a href="#projects" className="bg-blue-600 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors">
               View My Work
@@ -336,7 +336,7 @@ export function PortfolioComponent() {
           <Github size={24} />
         </a>
         <a 
-          href="mailto:maxamed@example.com" 
+          href="mailto:maxamed.maxamed4331@gmail.com" 
           className="text-gray-400 hover:text-blue-600 transition duration-200"
         >
           <Mail size={24} />
