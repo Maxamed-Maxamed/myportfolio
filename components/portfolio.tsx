@@ -25,7 +25,7 @@ export function PortfolioComponent() {
     <div className="min-h-screen bg-gray-50 font-sans">
       <nav className="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <a href="#home" className="text-2xl font-bold text-blue-600">Maxamed Maxamed</a>
+          <a href="#home" className="text-2xl font-bold text-blue-600">MM</a>
           
           <div className="hidden md:flex space-x-4">
             <NavItem icon={<Home size={18} />} label="Home" section="home" />
