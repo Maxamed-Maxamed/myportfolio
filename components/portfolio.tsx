@@ -25,7 +25,8 @@ export function PortfolioComponent() {
     <div className="min-h-screen bg-gray-50 font-sans">
       <nav className="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <a href="#home" className="text-2xl font-bold text-blue-600">MM</a>
+          <a href="#home" className="text-2xl font-bold text-blue-600">Maxamed Maxamed</a>
+          
           <div className="hidden md:flex space-x-4">
             <NavItem icon={<Home size={18} />} label="Home" section="home" />
             <NavItem icon={<User size={18} />} label="About" section="about" />
@@ -36,10 +37,18 @@ export function PortfolioComponent() {
         </div>
       </nav>
 
+
+
+
+
+
+
+
+
       <main className="pt-16">
         <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4 text-gray-800">Maxamed Maxamed</h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4 text-gray-800">MM</h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-600">Aspiring Full Stack Developer & Cybersecurity Enthusiast</p>
             <a href="#projects" className="bg-blue-600 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors">
               View My Work
@@ -224,7 +233,7 @@ export function PortfolioComponent() {
                         </span>
                       ))}
                     </div>
-                    <a href="#" className="text-blue-600 hover:text-blue-800 transition-colors inline-flex items-center">
+                    <a href="https://github.com/Maxamed-Maxamed" className="text-blue-600 hover:text-blue-800 transition-colors inline-flex items-center">
                       View Project <ExternalLink size={16} className="ml-1" />
                     </a>
                   </div>
@@ -268,7 +277,7 @@ export function PortfolioComponent() {
 
 
 
-<section id="contact" className="py-20 bg-slate-200">
+<section id="contact" className="py-20  bg-gradient-to-br from-blue-50 to-indigo-100">
   <div className="container mx-auto px-6">
     <h2 className="text-4xl font-bold mb-8 text-center text-gray-900">Contact Me</h2>
     <div className="max-w-xl mx-auto bg-white rounded-lg shadow-lg p-8">
@@ -309,7 +318,7 @@ export function PortfolioComponent() {
           </button>
         </div>
       </form>
-      <div className="mt-8 flex justify-center space-x-6">
+      <div className="mt-8 flex justify-center space-x-6  ">
         <a 
           href="https://linkedin.com/in/maxamed-maxamed-a87298151" 
           target="_blank" 
