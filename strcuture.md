@@ -6,29 +6,29 @@
                 └── .cache_u9rrdd
             └── 📁images
                 └── 📁+EvMzJBOfnTVf5XveG0MsPssg-YY03sIa+XzjxToKdQ=
-                    └── 60.1729535367799.8vQqdM+4B71-bTxAZrrwVDx8qYVpMhl6aZYAU3R6TLQ=.webp
+                    └── 60.1729617088115.8vQqdM+4B71-bTxAZrrwVDx8qYVpMhl6aZYAU3R6TLQ=.webp
                 └── 📁03kfxClC7Vs+MKCl+rl565AbBJ9+9-qkOmifd5WrRf0=
-                    └── 60.1729535364446.QWCtCR77A86Kn+0UCumFlwfldoVrbWh+-2gDVtLEIR8=.webp
+                    └── 60.1729617091259.QWCtCR77A86Kn+0UCumFlwfldoVrbWh+-2gDVtLEIR8=.webp
                 └── 📁1g7bkrAib1n3ITn7QGrngTkOVOayAn-Cw1zHN9QBlg4=
-                    └── 60.1729535363924.UyKWGlVvUfVpNJi5iZN9FzAbYE9knfsvI8T96HCe+n8=.webp
+                    └── 60.1729617091084.UyKWGlVvUfVpNJi5iZN9FzAbYE9knfsvI8T96HCe+n8=.webp
                 └── 📁4CP6-U-QaiDp6M5hgJ5122CK8bQg2ijU7-U3vUxTeOE=
-                    └── 60.1729535363802.pOXcGVFcpDV-OsKschpkcupEub-hb6DNOeYiuoy-hB8=.webp
+                    └── 60.1729617091003.pOXcGVFcpDV-OsKschpkcupEub-hb6DNOeYiuoy-hB8=.webp
                 └── 📁7SSf0K5sDjT+yHGGWj+KWlZIQ9VjaLdRSnJEpUFhRVY=
-                    └── 60.1729535364429.NUh+fjZBF25H5WuvLIUYK6VDbVlQQVq5Rwu1dKaLYDk=.webp
+                    └── 60.1729617091257.NUh+fjZBF25H5WuvLIUYK6VDbVlQQVq5Rwu1dKaLYDk=.webp
                 └── 📁euPcePoIb1ctPuGfA2iLvKcGONUlqVayjauyTtyukH0=
                     └── 60.1729433633072.xgOEARJYs9clX1OrybN7eF9hjtShwQdzuqEwwRibJjA=.webp
                 └── 📁jfwg8fRofosvRkdrrg+1u9ufhuexGTK9bPsnMHhu94s=
-                    └── 60.1729535363700.d92B3p7g6blOw2zaAiAdR5wHAQ8Yz5ERgKupIifXsBU=.webp
+                    └── 60.1729617091008.d92B3p7g6blOw2zaAiAdR5wHAQ8Yz5ERgKupIifXsBU=.webp
                 └── 📁lHlhYsdEVXw1lWL-ERcTJcHvy-r-N78Z7iz2YftgNwQ=
                     └── 60.1729438343627.KltpeM8AXTCN6D2BPPr7yZMUTdPaIS6aNq-nJQCTxmk=.webp
                 └── 📁QIWYYdRh-Zml4u5jm7iWCVAbtQxkhStIDXcY05MqilY=
-                    └── 60.1729535363724.L2p5zhFWOLGho+HgfQ-PQk8JuguTENl71sukUb6ZrvI=.webp
+                    └── 60.1729617091011.L2p5zhFWOLGho+HgfQ-PQk8JuguTENl71sukUb6ZrvI=.webp
                 └── 📁T3-xcGT02aVIOaxd+BeOybIBxqVIyIgVdVgC2OctEcU=
                     └── 60.1729435943057.KltpeM8AXTCN6D2BPPr7yZMUTdPaIS6aNq-nJQCTxmk=.webp
                 └── 📁V2rXl6ey4DOh68NF4ult6sKwm-ao1rRADZVHL+dkiPY=
                     └── 60.1729433591850.EgdQeH84ABdb8KVCl2U0V+H8co7LPTFv0ZWe73E2c8Y=.webp
                 └── 📁yJRxDXJXTCH3b1-s5kBYmb8ONYCZ4GCddIlMCXWeArs=
-                    └── 60.1729535363925.SgSeR7X2WbPhIEDT1yh2osPgvBCa5tBj5s33Ygm0uLw=.webp
+                    └── 60.1729617091088.SgSeR7X2WbPhIEDT1yh2osPgvBCa5tBj5s33Ygm0uLw=.webp
             └── 📁swc
                 └── 📁plugins
                     ├── v7_windows_x86_64_0.106.15
@@ -89,6 +89,8 @@
                 └── 📁server-production
                     └── 0.pack
                     └── 1.pack
+                    └── 10.pack
+                    └── 11.pack
                     └── 2.pack
                     └── 3.pack
                     └── 4.pack
@@ -105,6 +107,7 @@
                 └── page_client-reference-manifest.js
                 └── page.js
             └── 📁vendor-chunks
+                └── @emailjs.js
                 └── @swc.js
                 └── lucide-react.js
                 └── next.js
@@ -139,10 +142,13 @@
                 └── 463dafcda517f24f-s.p.woff
             └── 📁webpack
                 └── 📁app
-                    └── layout.68c6af56043a6b08.hot-update.js
+                    └── layout.771be43bdbeb6fcc.hot-update.js
+                    └── layout.938dc80d9548cbb9.hot-update.js
                 └── 633457081244afec._.hot-update.json
-                └── 68c6af56043a6b08.webpack.hot-update.json
-                └── webpack.68c6af56043a6b08.hot-update.js
+                └── 771be43bdbeb6fcc.webpack.hot-update.json
+                └── 938dc80d9548cbb9.webpack.hot-update.json
+                └── webpack.771be43bdbeb6fcc.hot-update.js
+                └── webpack.938dc80d9548cbb9.hot-update.js
         └── 📁types
             └── 📁app
                 └── layout.ts
@@ -174,15 +180,18 @@
         └── mine.jpeg
         └── MovieApp.jpeg
         └── VulnerabilityAssessmentTool.jpeg
+    └── .env.local
     └── .eslintrc.json
     └── .gitignore
     └── components.json
+    └── env.d.ts
     └── next-env.d.ts
     └── next.config.mjs
     └── package-lock.json
     └── package.json
     └── postcss.config.mjs
     └── README.md
+    └── strcuture.md
     └── tailwind.config.ts
     └── tsconfig.json
 ```
