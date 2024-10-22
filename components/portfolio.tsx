@@ -2,8 +2,12 @@
 import { ReactNode } from 'react';
 import Image from 'next/image'
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 import { Github, Linkedin, Mail, ExternalLink, Award, Code, User, Home, Briefcase, Phone, Server, Shield, Database, GitBranch, Layers, Cloud, Menu, X } from 'lucide-react';
+
+
+
 
 interface NavItemProps {
   icon: ReactNode;
@@ -11,6 +15,10 @@ interface NavItemProps {
   section: string;
   onClose: () => void;
 }
+
+
+
+
 
 
 const NavItem: React.FC<NavItemProps> = ({ icon, label, section, onClose }) => (
@@ -32,8 +40,56 @@ export function PortfolioComponent() {
 
   
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | null>(null);
+
+  
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const result = await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          to_name: 'Maxamed',
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+      );
+
+      if (result.status === 200) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+      }
+    } catch (error) {
+      console.error('Failed to send email:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+  
   return (
 
 <div className="min-h-screen bg-gray-50 font-sans">
@@ -311,7 +367,13 @@ export function PortfolioComponent() {
 
 
 
-<section id="contact" className="py-20  bg-gradient-to-br from-blue-50 to-indigo-100">
+
+
+
+
+
+
+{/* <section id="contact" className="py-20  bg-gradient-to-br from-blue-50 to-indigo-100">
   <div className="container mx-auto px-6">
     <h2 className="text-4xl font-bold mb-8 text-center text-gray-900">Contact Me</h2>
     <div className="max-w-xl mx-auto bg-white rounded-lg shadow-lg p-8">
@@ -378,7 +440,114 @@ export function PortfolioComponent() {
       </div>
     </div>
   </div>
-</section>
+</section> */}
+
+
+
+
+
+ <section id="contact" className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-6">
+          <h2 className="text-4xl font-bold mb-8 text-center text-gray-900">Contact Me</h2>
+          <div className="max-w-xl mx-auto bg-white rounded-lg shadow-lg p-8">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-800">Name</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  className="mt-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50 p-3" 
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-800">Email</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  className="mt-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50 p-3" 
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-800">Message</label>
+                <textarea 
+                  id="message" 
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  rows={4} 
+                  className="mt-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50 p-3"
+                  required
+                ></textarea>
+              </div>
+              <div>
+                <button 
+                  type="submit" 
+                  disabled={isSubmitting}
+                  className={`w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white ${
+                    isSubmitting ? 'bg-blue-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700'
+                  } focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150`}
+                >
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                </button>
+              </div>
+
+              {submitStatus === 'success' && (
+                <div className="p-4 bg-green-100 text-green-700 rounded-md">
+                 Message sent successfully! I&apos;ll get back to you soon.
+                </div>
+              )}
+              
+              {submitStatus === 'error' && (
+                <div className="p-4 bg-red-100 text-red-700 rounded-md">
+                  Failed to send message. Please try again later.
+                </div>
+              )}
+            </form>
+            
+            <div className="mt-8 flex justify-center space-x-6">
+              <a 
+                href="https://linkedin.com/in/maxamed-maxamed-a87298151" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-gray-400 hover:text-blue-600 transition duration-200"
+              >
+                <Linkedin size={24} />
+              </a>
+              <a 
+                href="https://github.com/Maxamed-Maxamed" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-gray-400 hover:text-gray-600 transition duration-200"
+              >
+                <Github size={24} />
+              </a>
+              <a 
+                href="mailto:maxamed.maxamed4331@gmail.com" 
+                className="text-gray-400 hover:text-blue-600 transition duration-200"
+              >
+                <Mail size={24} />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+
 
 
 
